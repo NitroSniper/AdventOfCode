@@ -2,10 +2,10 @@ from GetProblem import get_problem
 from collections import Counter
 
 
-def part_1() -> None:
-    foo = get_problem(1, 2024)
+@get_problem(1, 2024)
+def part_1(input_data) -> None:
     # split the data number (string)
-    left_and_rights = [line.split() for line in foo.split("\n") if len(line)]
+    left_and_rights = [line.split() for line in input_data.split("\n") if len(line)]
 
     # Transpose the list
     left, right = map(list, zip(*left_and_rights))
@@ -17,10 +17,10 @@ def part_1() -> None:
     return output
 
 
-def part_2() -> None:
-    foo = get_problem(1, 2024)
+@get_problem(1, 2024)
+def part_2(input_data) -> None:
     # split the data number (string)
-    left_and_rights = [line.split() for line in foo.split("\n") if len(line)]
+    left_and_rights = [line.split() for line in input_data.split("\n") if len(line)]
     # Transpose the list
     left, right = map(list, zip(*left_and_rights))
 
